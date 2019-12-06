@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, fireEvent, toBeInTheDocument} from "@testing-library/react"
+import {render, fireEvent} from "@testing-library/react"
 import App from './App';
 
 
@@ -11,6 +11,10 @@ test("renders app", () => {
 test('it renders Women', () => {
   const { getByText } = render(<App />);
   const elem = getByText(/Women/);
-  expect(elem).toHaveTextContent();
+  expect(elem).toBeInTheDocument();
 });
 
+test("renders app", () => {
+  const { getByText } = render(<App />)
+  getByText(/Women/)
+})

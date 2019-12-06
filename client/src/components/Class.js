@@ -20,9 +20,10 @@ class Class1 extends React.Component{
     componentDidUpdate(prevProps, prevState){
         if (prevState !== this.state.data){
             console.log("changes")
-            return this.state.data
+            // return this.state.data
         }
     }
+
 
     render(){
         return (

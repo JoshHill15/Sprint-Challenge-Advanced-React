@@ -11,6 +11,6 @@ test("renders app", () => {
 test('it renders Women', () => {
   const { getByText } = render(<App />);
   const elem = getByText(/Women/);
-  expect(elem).toBeInTheDocument();
+  expect(elem).toHaveTextContent();
 });
 
